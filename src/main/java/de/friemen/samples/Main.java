@@ -12,12 +12,12 @@ public class Main {
 		// access clojure.core lib
 		core.fn("println").invoke("Hello Awesomeness!");
 		
-		
 		final List<Integer> output = 
 				(List<Integer>) 
 				core.fn("map").invoke(
 						core.fn("inc"), 
 						new Integer[] { 1, 2, 3});
+		
 		for (Object x :output) {
 			System.out.println(x);
 		}
@@ -32,8 +32,7 @@ public class Main {
 		
 		for (Object x : output2) {
 			System.out.println(x);
-		}
-		
+		}		
 		
 		// use a dedicated class to hold real Java wrappers for more convenience
 		final Awesome awesome2 = new Awesome();
@@ -45,4 +44,5 @@ public class Main {
 						new Employee("Micky Mouse", "Luenen", 50)));
 		System.out.println(result);
 	}
+	
 }
